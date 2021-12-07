@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <title>Zesta Shop</title>
+</head>
+<body onload="renderList();">
+    <div id="main">
+        <header id="header">
+            <div class="gird">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="" class="header_navbar-icon-link"><i class="header__navbar-icon fab fa-facebook"></i></a>
+                            <a href="" class="header_navbar-icon-link"><i class="header__navbar-icon fab fa-instagram"></i></a>        
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list header__navbar-list-right ">
+                        <li class="header__navbar-item">
+                            <a href="#" class="header_navbar-item-link" onclick="showGioHang();"><i class="header__navbar-icon fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li id="resign" class="header__navbar-item header__navbar-item--strong header__navbar-item--separate" onclick="openFormDK();">Đăng ký</li>
+                        <li id="login" class="header__navbar-item header__navbar-item--strong" onclick="openFormDN();">Đăng nhập</li>
+                        <li id="tentk" class="header__navbar-item header__navbar-item--strong"></li>
+                        <li id="logout" class="header__navbar-item header__navbar-item--strong" onclick="logout();"></li>
+                    </ul>
+                </nav>
+            </div>
+           <div class="header-topmenu-container">
+                <div class="header-logo-img">
+                    <img src="./assets/img/logo/Zesta.png" alt="" class="header-logo"  >
+                </div>
+                <div class="header__topmenu">
+                    <ul class="header__topmenu-list">
+                        <li class="header__topmenu-item" ><a href="">Trang chủ</a></li>
+                        <li class="header__topmenu-item" ><a  href="#content" >Danh mục sản phẩm</a></li>
+                        <li class="header__topmenu-item" >
+                            <a href="#discout">Nhận khuyến mãi </a></i>
+                        </li>
+                        <li class="header__topmenu-item"><a href="#footer">Giới thiệu</a></li>
+                    </ul>
+                    <div class="header-menu-icon">
+                        <i class="fas fa-bars menu-icon" onclick="showHeader();"></i>
+                    </div>
+                </div>
+                <div class="header__seach">
+                    <input type="text" class="header__seach-input" placeholder="Tìm kiếm ">
+                    <div class="header__seach-btn">
+                        <i class="header__seach-btn-icon fas fa-search"></i>
+                    </div>
+                </div>
+           </div>
+        </header>
+
+        <div id="slide-show">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="./assets/img/slider/slideshow_6.jpg" >
+                </div>
+    
+                <div class="mySlides fade">
+                    
+                    <img src="./assets/img/slider/slideshow_14.jpg" >
+                </div>
+    
+                <div class="mySlides fade">
+                    
+                    <img src="./assets/img/slider/slider11.jpg" >
+                </div>
+    
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="left-menu">
+                <!-- <h3>Danh mục sản phẩm</h3>
+                <ul>
+                    <li><a href="#">Dell</a></li>
+                    <li><a href="#">HP</a></li>
+                    <li><a href="#">Acer</a></li>
+                    <li><a href="#">Apple</a></li>
+                </ul> -->
+
+            </div>  
+                <div class="content-container">
+                    <div id="divproduct">
+                            
+                    </div>
+                    <div id="pages">
+                        
+                    </div>
+                    
+                </div>
+            
+        </div>
+        <div id="discout">
+            <div class="discount-container">
+                <h3 class="discount-header">Nhận thông tin khuyến mãi</h3>
+                <div class="discount-content-body">
+                    <input type="email" placeholder="Nhập email" id="discountMail">
+                    <i class="fas fa-arrow-right" onclick="confirmDiscount();"></i>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="footer-list">
+                <div class="ft-item first">
+                    <img src="./assets/img/logo/Zesta.png" alt="" class="footer-logo" >
+                </div>
+                <span class="line" style=" justify-content: center;margin: 20px 0;"> _________________________________________________________</span>
+                <div class="ft-item">
+                    <h4 class="ft-heading">Thông tin hữu ích</h4>
+                    <div class="item-body">
+                        <p class="ft-about">Kiểm tra máy tính</p>
+                        <p class="ft-about">Hướng dẫn bảo hành</p>
+                        <p class="ft-about">Quy định đổi giày</p>
+                    </div>
+                </div>
+                <span class="line" style=" justify-content: center; margin: 20px 0;"> _________________________________________________________</span>
+                <div class="ft-item">
+                    <h4 class="ft-heading">Giới thiệu</h4>
+                    <div class="item-body">
+                        <p class="ft-about">Quan niệm máy tính</p>
+                        <p class="ft-about">Danh sách cửa hàng</p>
+                        <p class="ft-about">Danh sách đại lý</p>
+
+                    </div>
+                </div>
+                <span class="line" style=" justify-content: center; margin: 20px 0;"> _________________________________________________________</span>
+                <div class="ft-item last">
+                    <h4 class="ft-heading">Thông tin liên hệ</h4>
+                    <div class="item-body">
+                        <p class="ft-about">
+                            Địa chỉ: 273 An Dương Vương, phường 3, quận 5, TpHCM</p>
+                        <p class="ft-about">Sdt: 0566490523 </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal modalDK">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <div class="inner">
+                
+                    <div class="container">
+                        <div class="container-header">
+                            <h3 class="container__heading">Đăng ký</h3>                       
+                        </div>
+                        <div class="close close-dk" onclick="closeForm();"><i class="close-icon fas fa-window-close"></i></div>
+                        
+                        
+                        <div class="container-form">
+                            <div class="container-form-group">
+                                <input type="text" class="container-form-input" id="name" placeholder="Nhập họ tên">
+                                    <div class="container-input-error errorDK4">
+                                        <p class="error">
+                                            Vui lòng nhập họ tên
+                                        </p>
+                                    </div>
+                            </div>
+                            <div class="container-form-group"> 
+                                <input type="text" class="container-form-input" id="user" placeholder="Nhập tài khoản">
+                                <div class="container-input-error errorDK">
+                                    <p class="error">
+                                        Vui lòng nhập tài khoản
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="container-form-group">
+                                <input type="password" class="container-form-input" id="pass" placeholder="Nhập mật khẩu">
+                                <div class="container-input-error errorDK1">
+                                    <p class="error">
+                                        Vui lòng nhập mật khẩu từ 6 ký tự
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="container-form-group">
+                                <input type="password" class="container-form-input" id="repass" placeholder="Nhập lại mật khẩu">
+                                <div class="container-input-error errorDK2">
+                                    <p class="error">
+                                        Vui lòng nhập lại mật khẩu trùng với mật khẩu
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="container-form-group">
+                                <input type="text" class="container-form-input input-phone" placeholder="Nhập số điện thoại">
+                                <div class="container-input-error errorDK3">
+                                    <p class="error">
+                                        Vui lòng nhập số điện thoại
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-control">
+                            
+                            <button class="btn btn-primary" onclick="createNewUser();">Đăng ký</button>
+                        </div>
+                    </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="modal modalDN">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <div class="inner">
+                <div class="container">
+                    <div class="container-header">
+                        <h3 class="container__heading">Đăng Nhập</h3>  
+                    </div>
+                    <div class="close close-dn" onclick="closeFormDN();"><i class="close-icon fas fa-window-close"></i></div>
+
+                    <div class="container-form">
+                        <div class="container-form-group">
+                            <input type="text" class="container-form-input" id="user2" placeholder="Nhập tài khoản">
+                            <div class="container-input-error errorDN1">
+                                <p class="error">
+                                    Vui lòng nhập tài khoản
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container-form-group">
+                            <input type="password" class="container-form-input" id="pass2" placeholder="Nhập mật khẩu">
+                            <div class="container-input-error errorDN2">
+                                <p class="error">
+                                    Vui lòng nhập mật khẩu
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-control">
+                        <button class="btn btn-primary" onclick="login();">Đăng Nhập</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        <div class="modal gio-hang-modal">
+        <div class="modal__overlay gh-overlay">
+
+        </div>
+        
+        <div class="giohang-container">
+            <div class="modal__body">
+                <h3 >Danh sách sản phẩm</h3>
+                <div class="gh-close" onclick="closeGioHang();"><i class="fas fa-window-close"></i></div>
+                <!-- <div class="item-header">
+                    <div class="gh-img gi">Ảnh</div>
+                    <p class="gh-name gn">Sản phẩm</p>
+                    <p class="gh-price gp">Đơn giá</p>
+                    <p class="amuont am">Số lượng</p>
+                    <p class="gh-sumPrice gs">Tổng tiền</p>
+                    <p class="act at">Xóa</p>
+                </div> -->
+                <div id="gio-hang">
+    
+                </div>
+                <div id="thanhtien">
+                    
+                </div>
+                <div class="confirm-item">
+                    <button class="btn-confirm" onclick="confirmDonHang();">Xác nhận đơn hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

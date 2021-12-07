@@ -1,0 +1,110 @@
+@media (max-width: 750px) {
+    #main{
+        margin: 0;
+    }
+    #header{
+        height: 100px;
+    }
+    #contentUser{
+        flex-direction: column;
+    }
+    .left-content{
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    .right-content{
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+    .account-body .tk,.mk,.name,.stt,.sdt,.del{
+        margin-left: 5px;
+    }
+    #contentProduct{
+        flex-direction: column;
+    }
+    .bill-ct2{
+        margin-left: 10px;
+    }
+    .bill-day{
+        display: none;
+    }
+    .bill-body .bill-name,.bill-thongtin,.bill-price,#tinhtrang{
+        max-width: 100px;
+        margin-left: 10px;
+    }
+    /* .bill-name, .bill-price{
+        max-width: 70px;
+
+    } */
+    .gh-price{
+        display:none;
+    }
+    .giohang-container{
+        margin: auto;
+        min-width: none;
+        max-width: none;
+    }
+    .gh-img,.gh-price,#soluong,.gh-sumPrice,.act,.gh-name{
+        margin: 0;
+    }
+    .item{
+        justify-content: flex-start;
+    } 
+    #left-menu{
+        width: 30%;
+    } 
+    .footer-list{
+        flex-direction: column;
+    }
+    .ft-item{
+        margin: auto;
+        min-width: 200px;
+    }
+    .line{
+        display: flex;
+    }
+    .header-menu-icon{
+        display: block;
+    }
+    .header__navbar {
+        justify-content: space-evenly;
+        height: 50px;
+    }
+    .header__navbar-list {
+
+        margin-left: 40px;
+    }
+    .header-logo-img{
+        display: none;
+    }
+    .header__topmenu-list {
+        display: flex;
+        margin: auto;
+        position: relative;
+        flex-direction: column;
+    }
+    .header-menu-icon {
+        position: absolute;
+        right: 0;
+        top: 62px;
+    }
+    .header__topmenu-item a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 0px 16px;
+        min-width: 150px;
+        text-align: left;
+    }
+    .header__topmenu {
+        overflow: hidden;
+    }
+    .header-topmenu-container{
+        justify-content: center;
+    }
+    .header__seach{
+        display: none;
+    }
+}

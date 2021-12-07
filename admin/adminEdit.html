@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/adminEdit.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <!-- <link rel="stylesheet" href="../assets/css/main.css"> -->
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <title>Admin Edit</title>
+</head>
+<body>
+    <div id="main">
+        <header id="headerEdit">
+            <nav id="nav">
+                <li onclick="showAdminBill();"><a href="#">Đơn hàng</a></li>
+                <li onclick="showUser();"><a href="#" >Tài khoản</a></li>
+                <li onclick="showAdd();"><a href="#">Thêm sản phẩm</a></li>
+                <li onclick="showAE();"><a href="#">Sửa xóa sản phẩm</a></li>
+                <li onclick="showDT();"><a href="#">Doanh thu</a></li>
+            </nav>
+        </header>
+        <div id="contentUser">
+            <div class="left-content">
+                <div class="header-left">
+                    <h2 class="header-left-content">Danh sách tài khoản</h2>
+                </div>
+                <ul class="account-body">
+                    <li class="stt">STT</li>
+                    <li class="name">Họ tên</li>
+                    <li class="tk">Tài Khoản</li>
+                    <li class="mk">Mật Khẩu</li>
+                    <li class="sdt">Số điện thoại</li>
+                    <li class="del">Xóa</li>
+                </ul>
+                <div id="printUser"></div>
+            </div>
+            
+            <div class="right-content">
+                <div id="right-container">
+
+                    <div class="header-left">
+                        <h2 class="header-left-content">Thêm tài khoản</h2>
+                    </div>
+                    <div class="item-body">
+                        <p class="text">Nhập họ tên</p>
+                        <input class="addUser" id="name" type="text">
+                        <div class="container-input-error errorDK3">
+                            <p class="error">
+                                Vui lòng nhập họ tên
+                            </p>
+                        </div>   
+                    </div> 
+                    <div class="item-body">
+                        <p class="text">Nhập số điện thoai</p>
+                        <input class="addUser" id="phone" type="text"> 
+                        <div class="container-input-error errorDK2">
+                            <p class="error">
+                                Vui lòng nhập số điện thoại
+                            </p>
+                        </div>  
+                    </div> 
+                    <div class="item-body">
+                        <p class="text">Nhập tài khoản</p>
+                        <input class="addUser" id="user" type="text">   
+                        <div class="container-input-error errorDK">
+                            <p class="error">
+                                Vui lòng nhập tài khoản
+                            </p>
+                        </div>
+                    </div> 
+                    <div class="item-body">
+                        <p class="text">Nhập mật khảu</p>
+                        <input class="addUser" id="pass" type="password">
+                        <div class="container-input-error errorDK1">
+                            <p class="error">
+                                Vui lòng nhập mật khẩu
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn-footer" onclick="createNewUser();">Thêm</button>
+                </div>
+                
+            </div>
+
+        </div>
+        <div id="contentBill">
+            <div class="left-content left-content-bill">
+                <div class="header-left">
+                    <h2 class="header-left-content">Danh sách đơn hàng</h2>
+                </div>
+                <ul class="bill-body">
+                <li class="bill-ct">Mã ĐH</li>
+                    <li class="bill-day">Ngày</li>
+                    <li class="bill-name">Tên</li>
+                    <li class="bill-price">Giá</li>
+                    <li class="bill-thongtin">Tình trạng</li>
+                    <li class="bill-ct">Chi tiết</li>
+                </ul>
+                <div id="printBill">
+                    
+                </div>
+            </div>   
+            
+        </div>
+
+        <div id="contentDT">
+            <div class="left-content left-content-bill left-content-billDT">
+                <div class="header-left">
+                    <h2 class="header-left-content">Đơn hàng đã thanh toán</h2>
+                </div>
+                <ul class="bill-body dt-body">
+                    <li class="dh-ct">Mã đơn hàng</li>
+                    <li class="dh-day">Ngày</li>
+                    <li class="dh-name">Tên</li>
+                    <li class="dh-price">Hóa đơn</li>
+                    
+                </ul>
+                <div id="printDT">
+                    
+                </div>
+                <div id="thanhtien" class="thanhtienDT">
+                    
+                </div>
+            </div>   
+            
+        </div>
+        
+        <div id="contentProduct">
+            <div class="left-content left-contentProduct">
+
+                <div class="header-left">
+                    <h2 class="header-left-content">Thêm sản phẩm</h2>
+                </div>
+                
+                <div class="item-body">
+                    <p class="text">Tên sản phẩm</p>
+                    <input class="addUser" id="tensp" type="text"> 
+                    <div class="container-input-error errorDK5">
+                        <p class="error">
+                            Vui lòng tên sản phẩm
+                        </p>
+                    </div>  
+                </div> 
+                <div class="item-body">
+                    <p class="text">Nhập giá</p>
+                    <input class="addUser" id="price" type="text">   
+                    <div class="container-input-error errorDK6">
+                        <p class="error">
+                            Vui lòng nhập giá
+                    </div>
+                </div> 
+                <div class="item-body">
+                    <p class="text">Nhập đường đẫn ảnh</p>
+                    <input type="file" id="myFile" name="filename">
+                    <!-- <input class="addUser" id="img" type="text"> -->
+                    <div class="container-input-error errorDK7">
+                        <p class="error">
+                            Vui lòng đường đẫn ảnh
+                        </p>
+                    </div>
+                </div>
+                <div class="item-body">
+                    <p class="text">Nhập loai</p>
+                    <input class="addUser" id="brand" type="text">
+                    <div class="container-input-error errorDK8">
+                        <p class="error">
+                            Vui lòng loại sản phẩm
+                        </p>
+                    </div>
+                </div>
+                <div class="left-content-footer">
+                    <div class="footer-click">
+                        <button class="btn-footer" onclick="xemtruoc();">Xem trước</button>
+                    </div>
+                    <div class="footer-click">
+                        <button class="btn-footer" onclick="addProduct();">Thêm</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="right-content">
+                <div id="right-container">
+                    <div class="header-right">
+                        <h2 class="header-right-content">Xem trước</h2>
+                    </div>
+                    <div id="product-body">
+                            
+                    </div>   
+                </div>   
+            </div>
+            
+        </div>
+        <div id="contentAE">
+            <div class="left-content left-content-bill left-content-billDT">
+                <div class="header-left">
+                    <h3 class="header-left-content header-left-contentAE">Danh sách sản phẩm</h3>
+                </div>
+                <div class="gh-close" onclick="closeEdit();"><i class="fas fa-window-close"></i></div>
+                
+                
+                <div id="printAE">
+                    
+                    
+                    
+                </div>
+                <div id="pages"></div>
+               
+            </div>   
+            
+        </div>
+        
+
+    </div>    
+    <div class="modal gio-hang-modal gio-hang-modal-edit">
+        <div class="modal__overlay gh-overlay">
+
+        </div>
+        
+        <div class="giohang-container">
+            <div class="modal__body">
+                <h3 >Danh sách sản phẩm</h3>
+                <div class="gh-close" onclick="closeGioHangEdit();"><i class="fas fa-window-close"></i></div>
+                <!-- <div class="item-header">
+                    <div class="gh-img gi">Ảnh</div>
+                    <p class="gh-name gn">Sản phẩm</p>
+                    <p class="gh-price gp">Đơn giá</p>
+                    <p class="amuont am">Số lượng</p>
+                    <p class="gh-sumPrice gs">Tổng tiền</p>
+                    <p class="act at">Xóa</p>
+                </div> -->
+                <div id="gio-hang">
+    
+                </div>
+                <div id="thanhtien">
+                    
+                </div>
+                <div class="confirm-item">
+                    <!-- <button class="btn-confirm" onclick="confirmDonHangAdmin();">Xác nhận đơn hàng</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <div class="modal modal-ae modal-ae-edit">
+        <div class="modal__overlay ae-overlay">
+
+        </div>
+        
+        <div class="ae-container">
+            <div class="modal__body modal__body-ae">
+                <h3 >Danh sách sản phẩm</h3>
+                <div class="gh-close" onclick="closeGioHangEdit();"><i class="fas fa-window-close"></i></div>
+                
+                <div id="edit">
+                    
+                    
+                    
+                    
+                </div>
+                
+                <div class="confirm-item btn-confirm-ae">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../assets/js/edit.js"></script>
+</body>
+</html>

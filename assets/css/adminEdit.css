@@ -1,0 +1,581 @@
+#main{
+    margin: 0 10%;
+    
+}
+#headerEdit{
+    height: 42px;
+    background-color: #032a55;
+    display: flex;
+    margin-bottom: 20px;
+}
+#nav{
+    display: flex;
+    font-size: 1.6rem;
+    list-style: none;
+    margin: auto;
+
+}
+#nav li a{
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    margin: auto;
+}
+#nav li:hover a{
+    background-color: rgb(13, 149, 240);
+}
+
+
+/* Content */
+#contentUser{
+    display: none;
+}
+.left-content{
+    height: 500px;
+    background-color: rgb(13, 149, 240);
+    width: 65%;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.right-content{
+    width: 30%;
+    height: 500px;
+    margin-left: 5%;
+    background-color: rgb(130, 149, 240);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.header-left{
+    display: flex;
+    margin-top: 20px;
+}
+.header-left-content{
+    margin: auto;
+}
+.account-body{
+    margin-top: 20px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+.account-body .stt,.del{
+    flex: 1;
+    margin-left: 10px; 
+}
+.account-body .tk,.mk,.sdt,.name{
+    flex: 2; 
+    margin-left: 10px; 
+}
+.del:hover i{
+    color: black;
+}
+#right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 80%; */
+    font-size: 1.6rem;
+}
+.item-body{
+    width: 80%;
+    margin-top: 20px;
+}
+.item-body p{
+    margin-bottom: 5px;
+}
+.addUser{
+    padding: 4px;
+    border-radius: 2px;
+    width: 100%;
+}
+.btn-footer{
+    margin-top: 20px;
+    padding: 8px;
+    align-items: flex-start;
+}
+/* Content add */
+#contentProduct{
+    display: none;
+    /* background-color: rgb(130, 149, 240); */
+
+}
+.left-contentProduct{
+    margin: auto;
+    width: 70%;
+    font-size: 1.6rem;
+    color:  #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-right{
+    margin: 20px 0;
+}
+.content-container .item-body input{
+    padding: 4px;
+    border: 1px solid #000;
+    margin-top: 4px;
+}
+.left-content-footer{
+    display: flex;
+}
+
+.footer-click{
+    margin: 4px;
+}
+.footer-click:hover .btn-footer{
+    cursor: pointer;
+    background-color: rgb(130, 149, 240);
+}
+
+#product-body {
+    margin: auto;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    margin: 8px;
+    border: 0.5px solid #ccc;
+}
+.product-img{
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+    height: 200px;
+}
+.product-decr{
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+    opacity: 0.8;
+}
+.product-name{
+    margin: auto;
+    font-size: 1.6rem;
+    margin: 8px 0;
+    text-align: center;
+    display: inline-block;
+}
+.product-price{
+    margin: auto;
+    text-align: center;
+    font-size: 1.6rem; 
+    color: blue;
+    margin: 8px 0;
+    display: inline-block;
+}
+.buy-btn{
+    height: 40px;
+    color: #fff;
+    background-color: rgb(13, 149, 240);
+    cursor: pointer;
+}
+/* BIll */
+#contentBill{
+    display: none;
+}
+.left-content-bill{
+    margin: auto;
+    min-width: 80%;
+}
+.bill-body{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 20px;
+    /* text-align: center; */
+}
+
+.bill-body .bill-day,.bill-ct{
+    flex: 1;
+    max-width: 105px;
+    margin-left: 10px;
+}
+.bill-body .bill-name,.bill-thongtin,.bill-price,#tinhtrang{
+    flex: 2;
+    max-width: 170px;
+    margin-left: 10px;
+}
+.bill-ct a{
+    background-color: #fff;
+    padding: 4px; 
+    color: #000;
+}
+.bill-ct:hover a{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.bill-ct2{
+    margin-left: 80px;
+}
+
+
+/* Error đăng ký admin */
+.container-input-error{
+    padding: 2px;
+    background-color: red;
+    display: none;
+    color: var(--white-color);
+    width: 80%;
+    margin: 2px 4px;
+}
+.container-form-input{
+    padding: 8px;
+    border: 1px solid;
+    min-width: 336px;  
+}
+
+/* Toast */
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999999;
+    }
+
+    .toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear 0.3s;
+    }
+
+    @keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+
+    @keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+    }
+
+    .toast--success {
+    border-color: #47d864;
+    }
+
+    .toast--success .toast__icon {
+    color: #47d864;
+    }
+
+
+
+    .toast--error {
+    border-color: #ff623d;
+    }
+
+    .toast--error .toast__icon {
+    color: #ff623d;
+    }
+
+    .toast + .toast {
+    margin-top: 24px;
+    }
+
+    .toast__icon {
+    font-size: 24px;
+    }
+
+    .toast__icon,
+    .toast__close {
+    padding: 0 16px;
+    }
+
+    .toast__body {
+    flex-grow: 1;
+    }
+
+    .toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    }
+
+    .toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+    }
+
+    .toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    }
+
+/* Giỏ hàng */
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.giohang-container{
+    margin: auto;
+    min-width: 50%;
+    max-width: 75%
+}
+.gio-hang-modal-edit{
+    display: flex;
+    position: absolute;
+}
+
+.gh-img img{
+    width: 70px;
+    height: 70px;
+}
+.gh-name{
+    font-size: 1.6rem;
+    flex: 3;
+    min-width: 30%;
+    margin-left: 20px;
+}
+.gh-price{
+    font-size: 1.6rem;
+    flex: 2;
+}
+.gh-sumPrice{
+    font-size: 1.6rem;
+    flex: 2;
+}
+.act{
+    font-size: 1.6rem;
+    margin-left: 40px;
+    flex: 1;
+}
+.item .gh-img,.gh-price{
+    flex: 1;
+    margin-left: 20px;
+}
+#soluong{
+    padding: 5px;
+    flex: 2;
+    text-align: center;
+}
+.gh-sumPrice{
+    margin: 0;
+}
+.item-header{
+    display: flex;
+    color: darkred;
+    margin-bottom: 20px;   
+}
+.amuont{
+    font-size: 1.6rem;
+    flex: 1;
+    text-align: center;
+}
+.gh-img{
+    font-size: 1.6rem;
+    margin-left: 30px;
+    flex: 1;
+}
+.item-header .at{
+    flex: 1;
+    margin-left: 30px;
+}
+.modal__body h3{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+.item-header .gn,.gp,.am{
+    flex: 2;
+}
+.item-header .gs{
+    text-align: start; 
+}
+.item-header .gn{
+    min-width: 20%;
+    flex: 3;
+    text-align: center;
+}
+.act:hover i{
+    cursor: pointer;
+    color: #fe6433;
+}
+.gh-close i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2.4rem;
+}
+.gh-close:hover i{
+    cursor: pointer;
+    color: red;
+}
+.item-header .gi{
+    margin-left: 0;
+    text-align: center;
+}
+.item-header .gp{
+    text-align: center;
+}
+#thanhtien{
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    margin: 20px;
+    border-top: 1px #ccc solid;
+    padding: 4px;
+}
+#thanhtien .sum{
+    color: red;
+    margin-left: 5%;
+    margin-top: 12px;
+    font-size: 2rem;
+}
+#thanhtien .price{
+    margin-right: 15%;
+    margin-top: 12px;
+}
+.confirm-item{
+    display: flex;
+}
+.btn-confirm{
+    margin: auto;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #000;
+    color: var(--white-color);
+    display: inline-block;
+}
+.confirm-item:hover .btn-confirm{
+    background-color: rgb(13, 149, 240);
+}
+
+
+/* Doanh số */
+.dh-ct, .dh-day,.dh-name, .dh-price, .dh-thongtin{
+    flex: 2;
+}
+#contentDT{
+    display: none;
+}
+.dt-body{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+#thanhtien .sumDT{
+    color: #fff;
+}
+
+/* Sửa xóa */
+#contentAE{
+    display: none;
+    position: relative;
+}
+.item{
+    text-align: center;
+    margin: 16px;
+}
+.ae-img img{
+    width: 70px;
+    height: 70px;
+}
+.ae-img,.ae-price{
+    flex: 2;
+}
+.ae-name{
+    flex: 3;
+}
+.header-left-contentAE{
+    margin-bottom: 20px;
+}
+.act{
+    margin: 0;
+}
+.act a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.act i{
+    margin-left: 10px;
+}
+.act-a:hover a{
+    color: #000;
+}
+
+.page-body{
+    display: flex;
+    justify-content: center;
+}
+div#pages {
+    position: absolute;
+    bottom: 10px;
+    left: 33%;
+    /* margin: auto; */
+}
+.page {
+    background-color: #ccc;
+    padding: 8px;
+    height: 15%;
+    margin: 4px;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6rem;
+}
+.page:hover{
+    background-color: #000;
+    color: var(--white-color);
+    cursor: pointer;
+}
+/* Modal AE */
+
+.ae-container{
+    margin: auto;
+    min-width: 50%;
+    max-width: 75%;
+    display: flex;
+}
+#edit {
+    display: flex;
+    flex-direction: column;
+    min-width: 70%;
+    font-size: 1.6rem;
+}
+.item-body-ae{
+    width: 600px;
+    margin-left: 20px;
+}
+.item-body-ae input{
+    padding: 6px;
+    max-width: 80%;
+    min-width: 60%;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+.btn-confirm-ae{
+    margin-top: 20px;
+}
+.edit-img {
+
+    margin: auto;
+}
+.edit-img img{
+    width: 100px;
+    height: 10-0px;
+}
